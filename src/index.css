@@ -54,7 +54,7 @@ h1,h2{
   background-color: white;
   padding: 1rem;
   text-align: center;
-  width:30rem;
+  width:20rem; /* changed the value from 30 to 20rem*/
   z-index: 10;
   position: fixed;
   top: 20vh;

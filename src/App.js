@@ -9,6 +9,7 @@ function App() {
       <Todo text="Learn React"/> 
       <Todo text="Be a master Of React"/> 
       <Todo text="Do not disappoint on project"/> 
+      
     </div>
   );
 }
