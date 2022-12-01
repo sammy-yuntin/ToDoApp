@@ -10,19 +10,22 @@ function Todo(props){
 
   useState();
 
-    function deletehandler() {
-      console.log("i was clicked")
+    function deleteHandler() {
       setModalIsOpen(true)
     }
 
-    return(
+    function closeModalHandler() {
+      setModalIsOpen(false)
+    } 
+
+    return(  
       <div className="card">
         <h2>{props.text}</h2>
         <div className="actions">
-          <button className="btn" onClick={deletehandler}>Delete</button>
+          <button className="btn" onClick={deleteHandler}>Delete</button>
         </div>
-        {modalIsOpen && <DeleteModal/>}
-        {modalIsOpen ? <Backdrop/> : null}
+        {modalIsOpen && <DeleteModal onCancel={closeModalHandler} onConfirm={closeModalHandler}/>}
+        {modalIsOpen ? <Backdrop onCancel={closeModalHandler}/> : null}
         
       </div>
     )
